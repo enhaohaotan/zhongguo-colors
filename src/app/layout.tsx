@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.css";
 
-const enFont = localFont({ src: "/SedanSC-Regular.ttf",variable: "--font-en", });
-const zhFont = localFont({ src: "/KX_47043_15.ttf",variable: "--font-zh", });
+const enFont = localFont({
+  src: "/SedanSC-Regular.ttf",
+  variable: "--font-en",
+});
+const zhFont = localFont({ src: "/KX_47043_15.ttf", variable: "--font-zh" });
 
 export const metadata: Metadata = {
   title: "ZHONGGUO COLORS",
@@ -19,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="zh">
       {/* <body className={enFont.className}> */}
-      <body className={`${enFont.variable} ${zhFont.variable}`}>
+      <body
+        className={`flex justify-center ${enFont.variable} ${zhFont.variable}`}
+      >
         {children}
       </body>
     </html>
