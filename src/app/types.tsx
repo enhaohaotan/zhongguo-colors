@@ -2,6 +2,7 @@ export interface Text {
   zh: string;
   en?: string;
   dk?: string;
+  "zh-Latn"?: string;
 }
 
 export interface Data {
@@ -50,6 +51,11 @@ export interface Color {
   HSL: number[];
   HSV: number[];
   RGB: number[];
+}
+
+export interface ColorValue {
+  name: string;
+  value: number[];
 }
 
 export const enum Type {
